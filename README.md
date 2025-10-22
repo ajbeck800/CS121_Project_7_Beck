@@ -1,7 +1,7 @@
 # CS121_Project_7_Beck
 ## (lab) The Java Guesser
 
-### main():
+### int main():
 ```
 int keepGoing starts true
 get menuRequest from menu()
@@ -17,7 +17,7 @@ while keepGoing = true:
         print "Invalid Selection. Select 0-2: "
 ```
 
-### menu():
+### int menu():
 ```
 Print a menu with options exit, human guesser, and computer guesser
 Print "Select 0-2: "
@@ -26,7 +26,7 @@ Store input in string menuRequest
 return menuRequest
 ```
 
-### humanGuesser():
+### void humanGuesser():
 ```
 int guess starts -999
 int correct will be randomly generated later
@@ -48,7 +48,7 @@ while keepGoing is true:
         set keepGoing to false
 ```
 
-### computerGuesser():
+### void computerGuesser():
 ```
 int guess is randomly generated
 string feedback is inputted by user
