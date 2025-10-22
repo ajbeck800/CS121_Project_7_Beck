@@ -17,7 +17,7 @@ while keepGoing = true:
         print "Invalid Selection. Select 0-2: "
 ```
 
-### menu()
+### menu():
 ```
 Print a menu with options exit, human guesser, and computer guesser
 Print "Select 0-2: "
@@ -26,7 +26,7 @@ Store input in string menuRequest
 return menuRequest
 ```
 
-### humanGuesser()
+### humanGuesser():
 ```
 int guess starts -999
 int correct will be randomly generated later
@@ -48,7 +48,7 @@ while keepGoing is true:
         set keepGoing to false
 ```
 
-### computerGuesser()
+### computerGuesser():
 ```
 int guess is randomly generated
 string feedback is inputted by user
