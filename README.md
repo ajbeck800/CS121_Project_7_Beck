@@ -1,7 +1,7 @@
 # CS121_Project_7_Beck
 ## (lab) The Java Guesser
 
-### int main():
+### void main():
 ```
 int keepGoing starts true
 get menuRequest from menu()
