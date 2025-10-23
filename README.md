@@ -57,6 +57,7 @@ int keepGoing starts true
 
 while keepGoing is true:
     set int guess to the mean of lower and upper
+    use a rounding function to round guess down
     increment turns
     ask user to enter h, l, or c (Too High, Too Low, or Correct)
     put it in string feedback
