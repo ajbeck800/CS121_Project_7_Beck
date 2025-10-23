@@ -50,12 +50,12 @@ while keepGoing is true:
 
 ### void computerGuesser():
 ```
-int guess is randomly generated
+int guess starts at 50
+int tempGuess starts at 0
 string feedback is inputted by user
 int turns starts at 0
 int keepGoing starts true
 
-generate a random between 1 and 100, put in guess
 print guess
 
 while keepGoing is true:
@@ -63,10 +63,12 @@ while keepGoing is true:
     ask user to enter h, l, or c (Too High, Too Low, or Correct)
     put it in feedback
     if feedback = "h":
-        generate a random between 1 and guess, put in guess
+        set tempGuess to guess/2
+        set guess to tempGuess
         print guess
     else if feedback = "l":
-        generate a random between guess and 100, put in guess
+        set tempGuess to guess + (guess/2)
+        set guess to tempGuess
         print guess
     else:
         set keepGoing to false
