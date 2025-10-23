@@ -1,13 +1,25 @@
 public class Guesser {
+	protected Boolean keepGoing;
 	protected String menuRequest;
 
 	public static void main() {
 		Guesser g = new Guesser();
 		
-		g.humanGuesser();
-		g.computerGuesser();
-		g.menu();
-		System.out.println(g.menu());
+		while (keepGoing == true){
+			g.menu();
+			if (menuRequest == 0){
+				keepGoing == false;
+			} // end if
+			else if (menuRequest == 1){
+				g.humanGuesser();
+			} // end else if
+			else if (menuRequest == 2){
+				g.computerGuesser();
+			} // end else if
+			else {
+				System.out.println("Invalid selection. Select 0-2: ");
+			} // end else
+		} // end while
 	} // end main
 		
 	public void humanGuesser(){

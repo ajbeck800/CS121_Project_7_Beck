@@ -51,26 +51,22 @@ while keepGoing is true:
 
 ### void computerGuesser():
 ```
-int guess starts at 50
-int tempGuess starts at 0
+int lower starts at 1
+int upper starts at 100
+int guess, use getMean to find mean of upper and lower
 string feedback is inputted by user
 int turns starts at 0
 int keepGoing starts true
 
-print guess
-
 while keepGoing is true:
+    set guess to the mean of lower and upper
     increment turns
     ask user to enter h, l, or c (Too High, Too Low, or Correct)
     put it in feedback
     if feedback = "h":
-        set tempGuess to guess/2
-        set guess to tempGuess
-        print guess
+        set upper to guess
     else if feedback = "l":
-        set tempGuess to guess + (guess/2)
-        set guess to tempGuess
-        print guess
+        set lower to guess
     else:
         set keepGoing to false
 ```
