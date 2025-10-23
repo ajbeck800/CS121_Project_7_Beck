@@ -3,21 +3,22 @@
 
 ### void main():
 ```
-int keepGoing starts true
-get menuRequest from menu()
+boolean keepGoing starts true
+set menuRequest to empty string
 
 while keepGoing = true:
+    call menu(), put result in menuRequest
     if menuRequest = 0:
         set keepGoing to false
     else if menuRequest = 1:
-        send user to humanGuesser
+        call humanGuesser()
     else if menuRequest = 2:
-        send user to computerGuesser
+        call computerGuesser()
     else:
         print "Invalid Selection. Select 0-2: "
 ```
 
-### int menu():
+### String menu():
 ```
 Print a menu with options exit, human guesser, and computer guesser
 Print "Select 0-2: "
