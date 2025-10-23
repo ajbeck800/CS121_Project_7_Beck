@@ -30,11 +30,10 @@ return menuRequest
 ### void humanGuesser():
 ```
 int guess starts -999
-int correct will be randomly generated later
 int turns starts at 0
 int keepGoing starts true
 
-generate a random between 1 and 100, put in correct
+correct generate a random between 1 and 100, set to int correct
 
 while keepGoing is true:
     increment turns
@@ -53,16 +52,14 @@ while keepGoing is true:
 ```
 int lower starts at 1
 int upper starts at 100
-int guess, use getMean to find mean of upper and lower
-string feedback is inputted by user
 int turns starts at 0
 int keepGoing starts true
 
 while keepGoing is true:
-    set guess to the mean of lower and upper
+    set int guess to the mean of lower and upper
     increment turns
     ask user to enter h, l, or c (Too High, Too Low, or Correct)
-    put it in feedback
+    put it in string feedback
     if feedback = "h":
         set upper to guess
     else if feedback = "l":
