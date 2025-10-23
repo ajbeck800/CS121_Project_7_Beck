@@ -1,6 +1,6 @@
-`public class Guesser {
-	protected static boolean keepGoing;
-	protected static String menuRequest;
+public class Guesser {
+	protected boolean keepGoing;
+	protected String menuRequest;
 
 	public static void main(String[] args) {
 		Guesser g = new Guesser();
