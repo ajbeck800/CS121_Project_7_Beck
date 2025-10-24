@@ -4,25 +4,25 @@
 ### void main():
 ```
 boolean keepGoing starts true
-set int menuRequest to -999
+set menuRequest to empty string
 
 while keepGoing = true:
     call menu(), put result in menuRequest
-    if menuRequest = 0:
+    if menuRequest = "0":
         set keepGoing to false
-    else if menuRequest = 1:
+    else if menuRequest = "1":
         call humanGuesser()
-    else if menuRequest = 2:
+    else if menuRequest = "2":
         call computerGuesser()
     else:
         print "Invalid Selection. Select 0-2: "
 ```
 
-### int menu():
+### String menu():
 ```
 Print a menu with options exit, human guesser, and computer guesser
 Print "Select 0-2: "
-Store input in int menuRequest
+Store input in string menuRequest
 
 return menuRequest
 ```

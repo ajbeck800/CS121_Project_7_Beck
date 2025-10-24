@@ -5,7 +5,7 @@ public class Guesser {
 	
 	public static void main(String[] args) {
 		boolean keepGoing = true;
-		String menuRequest = "";
+	       	String menuRequest = "";
 		Guesser g = new Guesser();
 		
 		while (keepGoing == true){
@@ -31,7 +31,7 @@ public class Guesser {
 		System.out.println("2) Computer Guesser");
 		System.out.println("Select 0-2: ");
 		String menuRequest = s.nextLine();
-
+		
 		return menuRequest;
         } // end menu
 
@@ -45,7 +45,7 @@ public class Guesser {
 			turns++;
 			System.out.println("Please enter a number: ");
 			try {
-			guess = System.in.read();
+				guess = System.in.read();
 			} // end try
 			catch (Exception e){
 				System.out.println(e.getMessage());
@@ -75,7 +75,7 @@ public class Guesser {
                         guess = ((lower+upper)/2);
 			turns++;
                         System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
-                        String feedback = s.nextLine();;
+                        String feedback = s.nextLine();
 
                         if (feedback == "h"){
                                 upper = guess;
