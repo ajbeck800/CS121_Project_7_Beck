@@ -44,8 +44,13 @@ public class Guesser {
 		while (keepGoing = true){
 			turns++;
 			System.out.println("Please enter a number: ");
+			try {
 			guess = System.in.read();
-			
+			} // end try
+			catch (Exception e){
+				System.out.println(e.getMessage());
+			} // end catch
+
 			if (guess < correct){
 				System.out.println("too low...");
 			} // end if

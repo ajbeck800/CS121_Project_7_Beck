@@ -4,7 +4,7 @@
 ### void main():
 ```
 boolean keepGoing starts true
-set menuRequest to empty string
+set int menuRequest to -999
 
 while keepGoing = true:
     call menu(), put result in menuRequest
@@ -18,11 +18,11 @@ while keepGoing = true:
         print "Invalid Selection. Select 0-2: "
 ```
 
-### String menu():
+### int menu():
 ```
 Print a menu with options exit, human guesser, and computer guesser
 Print "Select 0-2: "
-Store input in string menuRequest
+Store input in int menuRequest
 
 return menuRequest
 ```
