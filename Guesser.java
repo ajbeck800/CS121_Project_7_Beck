@@ -1,8 +1,7 @@
 public class Guesser {
-	protected boolean keepGoing;
-	protected String menuRequest;
-
 	public static void main(String[] args) {
+		boolean keepGoing = true;
+		String menuRequest = "";
 		Guesser g = new Guesser();
 		
 		while (keepGoing == true){
@@ -23,13 +22,11 @@ public class Guesser {
 	} // end main
 
 	public String menu(){
-                System.out.println("0) Exit");
+		System.out.println("0) Exit");
 		System.out.println("1) Human Guesser");
 		System.out.println("2) Computer Guesser");
 		System.out.println("Select 0-2: ");
 		int menuRequest = System.in.read();
-		
-		return menuRequest;
         } // end menu
 
 	public void humanGuesser(){
