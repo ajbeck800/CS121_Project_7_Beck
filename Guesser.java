@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Guesser {
-	Scanner s = new Scanner(System.in);	
+	Scanner scanner = new Scanner(System.in);	
 	
 	public static void main(String[] args) {
 		boolean keepGoing = true;
@@ -30,8 +30,8 @@ public class Guesser {
 		System.out.println("1) Human Guesser");
 		System.out.println("2) Computer Guesser");
 		System.out.println("Select 0-2: ");
-		String menuRequest = s.nextLine();
-		
+		String menuRequest = scanner.nextLine();
+
 		return menuRequest;
         } // end menu
 
@@ -75,7 +75,7 @@ public class Guesser {
                         guess = ((lower+upper)/2);
 			turns++;
                         System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
-                        String feedback = s.nextLine();
+                        String feedback = scanner.nextLine();
 
                         if (feedback == "h"){
                                 upper = guess;
