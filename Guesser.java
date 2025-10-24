@@ -38,7 +38,7 @@ public class Guesser {
 		while (keepGoing = true){
 			turns++;
 			System.out.println("Please enter a number: ");
-			int guess = System.in.read();
+			guess = System.in.read();
 			
 			if (guess < correct){
 				System.out.println("too low...");
@@ -54,22 +54,23 @@ public class Guesser {
 	} // end humanGuesser
 	
 	public void computerGuesser(){
+		int guess = -999;
 		int lower = 1;
                 int upper = 100;
                 int turns = 0;
 		boolean keepGoing = true;
                 
                 while (keepGoing = true){
-                        int comGuess = ((lower+upper)/2);
+                        guess = ((lower+upper)/2);
 			turns++;
                         System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
                         String feedback = System.in.read();
 
                         if (feedback == "h"){
-                                upper = comGuess;
+                                upper = guess;
                         } // end if
                         else if (feedback == "l"){
-                                lower = comGuess;
+                                lower = guess;
                         } // end else if
                         else {
                                 keepGoing = false;

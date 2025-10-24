@@ -48,21 +48,22 @@ while keepGoing is true:
 
 ### void computerGuesser():
 ```
+int guess starts -999
 int lower starts at 1
 int upper starts at 100
 int turns starts at 0
 int keepGoing starts true
 
 while keepGoing is true:
-    set int comGuess to the mean of lower and upper
-    use a rounding function to round comGuess down
+    set int guess to the mean of lower and upper
+    use a rounding function to round guess down
     increment turns
     ask user to enter h, l, or c (Too High, Too Low, or Correct)
     put it in string feedback
     if feedback = "h":
-        set upper to comGuess
+        set upper to guess
     else if feedback = "l":
-        set lower to comGuess
+        set lower to guess
     else:
         set keepGoing to false
 ```
