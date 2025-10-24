@@ -23,8 +23,6 @@ while keepGoing = true:
 Print a menu with options exit, human guesser, and computer guesser
 Print "Select 0-2: "
 Store input in string menuRequest
-
-return menuRequest
 ```
 
 ### void humanGuesser():
