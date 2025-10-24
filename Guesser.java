@@ -60,16 +60,16 @@ public class Guesser {
 		boolean keepGoing = true;
                 
                 while (keepGoing = true){
-                        int guess = ((lower+upper)/2);
+                        int comGuess = ((lower+upper)/2);
 			turns++;
                         System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
                         String feedback = System.in.read();
 
                         if (feedback == "h"){
-                                upper = guess;
+                                upper = comGuess;
                         } // end if
                         else if (feedback == "l"){
-                                lower = guess;
+                                lower = comGuess;
                         } // end else if
                         else {
                                 keepGoing = false;

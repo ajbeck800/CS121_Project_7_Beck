@@ -54,15 +54,15 @@ int turns starts at 0
 int keepGoing starts true
 
 while keepGoing is true:
-    set int guess to the mean of lower and upper
-    use a rounding function to round guess down
+    set int comGuess to the mean of lower and upper
+    use a rounding function to round comGuess down
     increment turns
     ask user to enter h, l, or c (Too High, Too Low, or Correct)
     put it in string feedback
     if feedback = "h":
-        set upper to guess
+        set upper to comGuess
     else if feedback = "l":
-        set lower to guess
+        set lower to comGuess
     else:
         set keepGoing to false
 ```
