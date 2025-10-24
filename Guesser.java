@@ -9,18 +9,18 @@ public class Guesser {
 		Guesser g = new Guesser();
 		
 		while (keepGoing == true){
-			g.menu();
-			if (menuRequest == "0"){
+			menuRequest = g.menu();
+			if (menuRequest.equals("0")){
 				keepGoing = false;
 			} // end if
-			else if (menuRequest == "1"){
+			else if (menuRequest.equals("1")){
 				g.humanGuesser();
 			} // end else if
-			else if (menuRequest == "2"){
+			else if (menuRequest.equals("2")){
 				g.computerGuesser();
 			} // end else if
 			else {
-				System.out.println("Invalid selection. Select 0-2: ");
+				System.out.println("Invalid selection.");
 			} // end else
 		} // end while
 	} // end main
@@ -43,9 +43,9 @@ public class Guesser {
 		
 		while (keepGoing = true){
 			turns++;
-			System.out.println("Please enter a number: ");
+			System.out.println(turns + ") Please enter a number: ");
 			try {
-				guess = System.in.read();
+				guess = Integer.parseInt(scanner.nextLine());;
 			} // end try
 			catch (Exception e){
 				System.out.println(e.getMessage());
@@ -60,12 +60,13 @@ public class Guesser {
 			else {
 				System.out.println("got it!");
 				keepGoing = false;
+				break;
 			} // end else
 		} // end while
 	} // end humanGuesser
 	
 	public void computerGuesser(){
-		int guess = -999;
+		int guess;
 		int lower = 1;
                 int upper = 100;
                 int turns = 0;
@@ -74,17 +75,19 @@ public class Guesser {
                 while (keepGoing = true){
                         guess = ((lower+upper)/2);
 			turns++;
+			System.out.println(turns + ") I guess " + guess);
                         System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
-                        String feedback = scanner.nextLine();
+                        String feedback = scanner.nextLine().trim().toLowerCase();;
 
-                        if (feedback == "h"){
+                        if (feedback.equals("h")){
                                 upper = guess;
                         } // end if
-                        else if (feedback == "l"){
+                        else if (feedback.equals("l")){
                                 lower = guess;
                         } // end else if
                         else {
                                 keepGoing = false;
+				break;
                         } // end else
                 } // end while
 	} // end computerGuesser
