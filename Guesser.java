@@ -1,4 +1,8 @@
+import java.util.*;
+
 public class Guesser {
+	Scanner s = new Scanner(System.in);	
+	
 	public static void main(String[] args) {
 		boolean keepGoing = true;
 		String menuRequest = "";
@@ -6,13 +10,13 @@ public class Guesser {
 		
 		while (keepGoing == true){
 			g.menu();
-			if (menuRequest == 0){
+			if (menuRequest == "0"){
 				keepGoing = false;
 			} // end if
-			else if (menuRequest == 1){
+			else if (menuRequest == "1"){
 				g.humanGuesser();
 			} // end else if
-			else if (menuRequest == 2){
+			else if (menuRequest == "2"){
 				g.computerGuesser();
 			} // end else if
 			else {
@@ -26,7 +30,9 @@ public class Guesser {
 		System.out.println("1) Human Guesser");
 		System.out.println("2) Computer Guesser");
 		System.out.println("Select 0-2: ");
-		int menuRequest = System.in.read();
+		String menuRequest = s.nextLine();
+
+		return menuRequest;
         } // end menu
 
 	public void humanGuesser(){
@@ -64,7 +70,7 @@ public class Guesser {
                         guess = ((lower+upper)/2);
 			turns++;
                         System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
-                        String feedback = System.in.read();
+                        String feedback = s.nextLine();;
 
                         if (feedback == "h"){
                                 upper = guess;
