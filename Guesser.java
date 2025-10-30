@@ -71,24 +71,24 @@ public class Guesser {
 		int upper = 100;
 		int turns = 0;
 		boolean keepGoing = true;
-                
-                while (keepGoing = true){
+		
+		while (keepGoing = true){
 			guess = ((lower+upper)/2);
 			turns++;
 			System.out.println(turns + ") I guess " + guess);
 			System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
 			String feedback = scanner.nextLine().trim().toLowerCase();;
-
-                        if (feedback.equals("h")){
-                                upper = guess;
-                        } // end if
-                        else if (feedback.equals("l")){
-                                lower = guess;
-                        } // end else if
-                        else {
-                                keepGoing = false;
+			
+			if (feedback.equals("h")){
+				upper = guess;
+			} // end if
+			else if (feedback.equals("l")){
+				lower = guess;
+			} // end else if
+			else {
+				keepGoing = false;
 				break;
-                        } // end else
+			} // end else
                 } // end while
 	} // end computerGuesser
 } // end class def
