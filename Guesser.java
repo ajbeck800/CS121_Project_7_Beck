@@ -68,16 +68,16 @@ public class Guesser {
 	public void computerGuesser(){
 		int guess;
 		int lower = 1;
-                int upper = 100;
-                int turns = 0;
+		int upper = 100;
+		int turns = 0;
 		boolean keepGoing = true;
                 
                 while (keepGoing = true){
-                        guess = ((lower+upper)/2);
+			guess = ((lower+upper)/2);
 			turns++;
 			System.out.println(turns + ") I guess " + guess);
-                        System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
-                        String feedback = scanner.nextLine().trim().toLowerCase();;
+			System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
+			String feedback = scanner.nextLine().trim().toLowerCase();;
 
                         if (feedback.equals("h")){
                                 upper = guess;
